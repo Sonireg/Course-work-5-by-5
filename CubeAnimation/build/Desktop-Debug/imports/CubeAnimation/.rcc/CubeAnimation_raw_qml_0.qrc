@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="/qt/qml/CubeAnimation/">
+    <file alias="Constants.qml">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/imports/CubeAnimation/Constants.qml</file>
+    <file alias="DirectoryFontLoader.qml">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/imports/CubeAnimation/DirectoryFontLoader.qml</file>
+    <file alias="EventListModel.qml">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/imports/CubeAnimation/EventListModel.qml</file>
+    <file alias="EventListSimulator.qml">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/imports/CubeAnimation/EventListSimulator.qml</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../../../CubeTextures/yellow.png</file>
+        <file>../../../../CubeTextures/white.png</file>
+    </qresource>
+</RCC>

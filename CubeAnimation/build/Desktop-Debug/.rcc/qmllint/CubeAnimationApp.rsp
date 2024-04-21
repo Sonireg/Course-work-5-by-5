@@ -1,0 +1,14 @@
+--bare
+-I
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug
+-I
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/qml
+-I
+/home/denis/Qt/6.7.0/gcc_64/./qml
+--resource
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/.rcc/configuration.qrc
+--resource
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/.rcc/qmake_Main.qrc
+--resource
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/.rcc/CubeAnimationApp_raw_qml_0.qrc
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/main.qml

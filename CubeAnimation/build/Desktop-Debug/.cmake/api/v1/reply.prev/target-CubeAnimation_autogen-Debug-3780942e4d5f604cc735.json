@@ -1,0 +1,79 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"imports/CubeAnimation/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "CubeAnimation_tooling::@fcde7526d1dde6212316"
+		},
+		{
+			"id" : "CubeAnimation_autogen_timestamp_deps::@fcde7526d1dde6212316"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "CubeAnimation_autogen::@fcde7526d1dde6212316",
+	"isGeneratorProvided" : true,
+	"name" : "CubeAnimation_autogen",
+	"paths" : 
+	{
+		"build" : "imports/CubeAnimation",
+		"source" : "imports/CubeAnimation"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/imports/CubeAnimation/CMakeFiles/CubeAnimation_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/imports/CubeAnimation/CMakeFiles/CubeAnimation_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/imports/CubeAnimation/CubeAnimation_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,15 @@
+-rootPath
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation
+-cmake-output
+-output-file
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_CubeAnimationApp.cmake
+-importPath
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/qml/Main
+-importPath
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/qml
+-importPath
+/home/denis/Qt/6.7.0/gcc_64/./qml
+-qrcFiles
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/.rcc/configuration.qrc
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/.rcc/qmake_Main.qrc
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/.rcc/CubeAnimationApp_raw_qml_0.qrc

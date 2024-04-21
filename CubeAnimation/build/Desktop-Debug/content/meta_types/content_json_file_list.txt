@@ -1,0 +1,4 @@
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/content/content_autogen/include/../EWIEGA46WW/moc_menu.cpp.json
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/content/content_autogen/include/../EWIEGA46WW/moc_rubickscube.cpp.json
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/content/content_autogen/include/../EWIEGA46WW/moc_solver.cpp.json
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/content/content_autogen/include/../EWIEGA46WW/moc_statefromscangetter.cpp.json

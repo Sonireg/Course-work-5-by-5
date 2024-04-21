@@ -1,0 +1,16 @@
+--bare
+-I
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/qml
+-I
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/qml
+-I
+/home/denis/Qt/6.7.0/gcc_64/./qml
+--resource
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/_deps/ds-build/src/imports/utils/.rcc/qmake_QtQuick_Studio_Utils.qrc
+--resource
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/_deps/ds-build/src/imports/utils/.rcc/QuickStudioUtils_raw_qml_0.qrc
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/_deps/ds-src/src/imports/utils/JsonListModel.qml
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/_deps/ds-src/src/imports/utils/JsonBackend.qml
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/_deps/ds-src/src/imports/utils/ChildListModel.qml
+--json
+/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/QuickStudioUtils_qmllint.json
