@@ -24,6 +24,8 @@ class RubicksCube : public QObject
 
     Q_PROPERTY(bool isFirstMove MEMBER isFirstMove NOTIFY moveChanged)
     Q_PROPERTY(bool isLastMove MEMBER isLastMove NOTIFY moveChanged)
+    Q_PROPERTY(bool isAutoAnimating MEMBER isAutoAnimating NOTIFY moveChanged)
+    Q_PROPERTY(QString animatingButtonText MEMBER animatingButtonText NOTIFY animatingButtonTextChanged)
 public:
     RubicksCube();
     Q_INVOKABLE qreal getXRotationOf(QString);
@@ -65,6 +67,7 @@ public:
     Q_INVOKABLE void onForwardClicked();
     Q_INVOKABLE void onBackClicked();
     Q_INVOKABLE void disableSolveButtons();
+    Q_INVOKABLE void onStartStopClicked();
 
     void setState(QMap<QString, QString> state);
 
@@ -72,6 +75,7 @@ public:
 signals:
     void solutionTextChanged();
     void moveChanged();
+    void animatingButtonTextChanged();
 private:
     QStringList solution;
     QString currMoveText;
@@ -132,11 +136,16 @@ private:
 
     bool isFirstMove = true;
     bool isLastMove = true;
+    bool isAutoAnimating = false;
 
     QTimer* solveButtonsDisabler = new QTimer();
 
     void setSolutionText();
 
     int amountOfMovesInSolution = 0;
+
+    QTimer autoAnimationTimer = QTimer();
+
+    QString animatingButtonText = "Пуск";
 };
 #endif // RUBICKSCUBE_H

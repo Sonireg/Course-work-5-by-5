@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/QtQuick/Studio/Utils">
-    <file alias="qmldir">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/qml/QtQuick/Studio/Utils/qmldir</file>
-  </qresource>
-</RCC>
-

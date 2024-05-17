@@ -307,6 +307,11 @@
                         "access": "public",
                         "name": "disableSolveButtons",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "onStartStopClicked",
+                        "returnType": "void"
                     }
                 ],
                 "object": true,
@@ -408,6 +413,34 @@
                         "stored": true,
                         "type": "bool",
                         "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "member": "isAutoAnimating",
+                        "name": "isAutoAnimating",
+                        "notify": "moveChanged",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "member": "animatingButtonText",
+                        "name": "animatingButtonText",
+                        "notify": "animatingButtonTextChanged",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
                     }
                 ],
                 "qualifiedClassName": "RubicksCube",
@@ -420,6 +453,11 @@
                     {
                         "access": "public",
                         "name": "moveChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "animatingButtonTextChanged",
                         "returnType": "void"
                     }
                 ],

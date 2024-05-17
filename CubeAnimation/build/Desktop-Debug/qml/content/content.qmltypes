@@ -40,8 +40,16 @@ Module {
         Property { name: "currStepOfSolution"; type: "int"; notify: "solutionTextChanged"; index: 4 }
         Property { name: "isFirstMove"; type: "bool"; notify: "moveChanged"; index: 5 }
         Property { name: "isLastMove"; type: "bool"; notify: "moveChanged"; index: 6 }
+        Property { name: "isAutoAnimating"; type: "bool"; notify: "moveChanged"; index: 7 }
+        Property {
+            name: "animatingButtonText"
+            type: "QString"
+            notify: "animatingButtonTextChanged"
+            index: 8
+        }
         Signal { name: "solutionTextChanged" }
         Signal { name: "moveChanged" }
+        Signal { name: "animatingButtonTextChanged" }
         Method {
             name: "getXRotationOf"
             type: "double"
@@ -99,6 +107,7 @@ Module {
         Method { name: "onForwardClicked" }
         Method { name: "onBackClicked" }
         Method { name: "disableSolveButtons" }
+        Method { name: "onStartStopClicked" }
     }
     Component {
         file: "solver.h"

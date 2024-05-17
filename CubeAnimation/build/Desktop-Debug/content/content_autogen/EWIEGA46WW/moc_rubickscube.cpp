@@ -45,6 +45,7 @@ constexpr auto qt_meta_stringdata_CLASSRubicksCubeENDCLASS = QtMocHelpers::strin
     "solutionTextChanged",
     "",
     "moveChanged",
+    "animatingButtonTextChanged",
     "getXRotationOf",
     "getYRotationOf",
     "getZRotationOf",
@@ -82,13 +83,16 @@ constexpr auto qt_meta_stringdata_CLASSRubicksCubeENDCLASS = QtMocHelpers::strin
     "onForwardClicked",
     "onBackClicked",
     "disableSolveButtons",
+    "onStartStopClicked",
     "currMoveText",
     "prevSolutionMoves",
     "nextSolutionMoves",
     "amountOfMovesInSolution",
     "currStepOfSolution",
     "isFirstMove",
-    "isLastMove"
+    "isLastMove",
+    "isAutoAnimating",
+    "animatingButtonText"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -101,61 +105,64 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRubicksCubeENDCLASS[] = {
       12,       // revision
        0,       // classname
        2,   14, // classinfo
-      39,   18, // methods
-       7,  303, // properties
+      41,   18, // methods
+       9,  317, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       3,       // signalCount
 
  // classinfo: key, value
        1,    2,
        3,    4,
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    0,  252,    6, 0x06,    8 /* Public */,
-       7,    0,  253,    6, 0x06,    9 /* Public */,
+       5,    0,  264,    6, 0x06,   10 /* Public */,
+       7,    0,  265,    6, 0x06,   11 /* Public */,
+       8,    0,  266,    6, 0x06,   12 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       8,    1,  254,    6, 0x02,   10 /* Public */,
-       9,    1,  257,    6, 0x02,   12 /* Public */,
-      10,    1,  260,    6, 0x02,   14 /* Public */,
-      11,    2,  263,    6, 0x02,   16 /* Public */,
-      12,    0,  268,    6, 0x02,   19 /* Public */,
-      13,    0,  269,    6, 0x02,   20 /* Public */,
-      14,    0,  270,    6, 0x02,   21 /* Public */,
-      15,    0,  271,    6, 0x02,   22 /* Public */,
-      16,    0,  272,    6, 0x02,   23 /* Public */,
-      17,    0,  273,    6, 0x02,   24 /* Public */,
-      18,    0,  274,    6, 0x02,   25 /* Public */,
-      19,    0,  275,    6, 0x02,   26 /* Public */,
-      20,    0,  276,    6, 0x02,   27 /* Public */,
-      21,    0,  277,    6, 0x02,   28 /* Public */,
-      22,    0,  278,    6, 0x02,   29 /* Public */,
-      23,    0,  279,    6, 0x02,   30 /* Public */,
-      24,    0,  280,    6, 0x02,   31 /* Public */,
-      25,    0,  281,    6, 0x02,   32 /* Public */,
-      26,    0,  282,    6, 0x02,   33 /* Public */,
-      27,    0,  283,    6, 0x02,   34 /* Public */,
-      28,    0,  284,    6, 0x02,   35 /* Public */,
-      29,    0,  285,    6, 0x02,   36 /* Public */,
-      30,    0,  286,    6, 0x02,   37 /* Public */,
-      31,    0,  287,    6, 0x02,   38 /* Public */,
-      32,    0,  288,    6, 0x02,   39 /* Public */,
-      33,    0,  289,    6, 0x02,   40 /* Public */,
-      34,    0,  290,    6, 0x02,   41 /* Public */,
-      35,    0,  291,    6, 0x02,   42 /* Public */,
-      36,    0,  292,    6, 0x02,   43 /* Public */,
-      37,    1,  293,    6, 0x02,   44 /* Public */,
-      38,    0,  296,    6, 0x02,   46 /* Public */,
-      39,    0,  297,    6, 0x02,   47 /* Public */,
-      40,    0,  298,    6, 0x02,   48 /* Public */,
-      41,    0,  299,    6, 0x02,   49 /* Public */,
-      42,    0,  300,    6, 0x02,   50 /* Public */,
-      43,    0,  301,    6, 0x02,   51 /* Public */,
-      44,    0,  302,    6, 0x02,   52 /* Public */,
+       9,    1,  267,    6, 0x02,   13 /* Public */,
+      10,    1,  270,    6, 0x02,   15 /* Public */,
+      11,    1,  273,    6, 0x02,   17 /* Public */,
+      12,    2,  276,    6, 0x02,   19 /* Public */,
+      13,    0,  281,    6, 0x02,   22 /* Public */,
+      14,    0,  282,    6, 0x02,   23 /* Public */,
+      15,    0,  283,    6, 0x02,   24 /* Public */,
+      16,    0,  284,    6, 0x02,   25 /* Public */,
+      17,    0,  285,    6, 0x02,   26 /* Public */,
+      18,    0,  286,    6, 0x02,   27 /* Public */,
+      19,    0,  287,    6, 0x02,   28 /* Public */,
+      20,    0,  288,    6, 0x02,   29 /* Public */,
+      21,    0,  289,    6, 0x02,   30 /* Public */,
+      22,    0,  290,    6, 0x02,   31 /* Public */,
+      23,    0,  291,    6, 0x02,   32 /* Public */,
+      24,    0,  292,    6, 0x02,   33 /* Public */,
+      25,    0,  293,    6, 0x02,   34 /* Public */,
+      26,    0,  294,    6, 0x02,   35 /* Public */,
+      27,    0,  295,    6, 0x02,   36 /* Public */,
+      28,    0,  296,    6, 0x02,   37 /* Public */,
+      29,    0,  297,    6, 0x02,   38 /* Public */,
+      30,    0,  298,    6, 0x02,   39 /* Public */,
+      31,    0,  299,    6, 0x02,   40 /* Public */,
+      32,    0,  300,    6, 0x02,   41 /* Public */,
+      33,    0,  301,    6, 0x02,   42 /* Public */,
+      34,    0,  302,    6, 0x02,   43 /* Public */,
+      35,    0,  303,    6, 0x02,   44 /* Public */,
+      36,    0,  304,    6, 0x02,   45 /* Public */,
+      37,    0,  305,    6, 0x02,   46 /* Public */,
+      38,    1,  306,    6, 0x02,   47 /* Public */,
+      39,    0,  309,    6, 0x02,   49 /* Public */,
+      40,    0,  310,    6, 0x02,   50 /* Public */,
+      41,    0,  311,    6, 0x02,   51 /* Public */,
+      42,    0,  312,    6, 0x02,   52 /* Public */,
+      43,    0,  313,    6, 0x02,   53 /* Public */,
+      44,    0,  314,    6, 0x02,   54 /* Public */,
+      45,    0,  315,    6, 0x02,   55 /* Public */,
+      46,    0,  316,    6, 0x02,   56 /* Public */,
 
  // signals: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -197,15 +204,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRubicksCubeENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
 
  // properties: name, type, flags
-      45, QMetaType::QString, 0x00015003, uint(0), 0,
-      46, QMetaType::QString, 0x00015003, uint(0), 0,
       47, QMetaType::QString, 0x00015003, uint(0), 0,
-      48, QMetaType::Int, 0x00015003, uint(0), 0,
-      49, QMetaType::Int, 0x00015003, uint(0), 0,
-      50, QMetaType::Bool, 0x00015003, uint(1), 0,
-      51, QMetaType::Bool, 0x00015003, uint(1), 0,
+      48, QMetaType::QString, 0x00015003, uint(0), 0,
+      49, QMetaType::QString, 0x00015003, uint(0), 0,
+      50, QMetaType::Int, 0x00015003, uint(0), 0,
+      51, QMetaType::Int, 0x00015003, uint(0), 0,
+      52, QMetaType::Bool, 0x00015003, uint(1), 0,
+      53, QMetaType::Bool, 0x00015003, uint(1), 0,
+      54, QMetaType::Bool, 0x00015003, uint(1), 0,
+      55, QMetaType::QString, 0x00015003, uint(2), 0,
 
        0        // eod
 };
@@ -231,11 +241,17 @@ Q_CONSTINIT const QMetaObject RubicksCube::staticMetaObject = { {
         bool,
         // property 'isLastMove'
         bool,
+        // property 'isAutoAnimating'
+        bool,
+        // property 'animatingButtonText'
+        QString,
         // Q_OBJECT / Q_GADGET
         RubicksCube,
         // method 'solutionTextChanged'
         void,
         // method 'moveChanged'
+        void,
+        // method 'animatingButtonTextChanged'
         void,
         // method 'getXRotationOf'
         qreal,
@@ -316,6 +332,8 @@ Q_CONSTINIT const QMetaObject RubicksCube::staticMetaObject = { {
         // method 'onBackClicked'
         void,
         // method 'disableSolveButtons'
+        void,
+        // method 'onStartStopClicked'
         void
     >,
     nullptr
@@ -329,48 +347,50 @@ void RubicksCube::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         switch (_id) {
         case 0: _t->solutionTextChanged(); break;
         case 1: _t->moveChanged(); break;
-        case 2: { qreal _r = _t->getXRotationOf((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 2: _t->animatingButtonTextChanged(); break;
+        case 3: { qreal _r = _t->getXRotationOf((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< qreal*>(_a[0]) = std::move(_r); }  break;
-        case 3: { qreal _r = _t->getYRotationOf((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 4: { qreal _r = _t->getYRotationOf((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< qreal*>(_a[0]) = std::move(_r); }  break;
-        case 4: { qreal _r = _t->getZRotationOf((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 5: { qreal _r = _t->getZRotationOf((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< qreal*>(_a[0]) = std::move(_r); }  break;
-        case 5: _t->setColor((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 6: { bool _r = _t->stateIsValid();
+        case 6: _t->setColor((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 7: { bool _r = _t->stateIsValid();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 7: _t->animateRotU(); break;
-        case 8: _t->animateRotUSt(); break;
-        case 9: _t->animateRotR(); break;
-        case 10: _t->animateRotRSt(); break;
-        case 11: _t->animateRotD(); break;
-        case 12: _t->animateRotDSt(); break;
-        case 13: _t->animateRotL(); break;
-        case 14: _t->animateRotLSt(); break;
-        case 15: _t->animateRotF(); break;
-        case 16: _t->animateRotFSt(); break;
-        case 17: _t->animateRotB(); break;
-        case 18: _t->animateRotBSt(); break;
-        case 19: _t->animateRotu(); break;
-        case 20: _t->animateRotuSt(); break;
-        case 21: _t->animateRotd(); break;
-        case 22: _t->animateRotdSt(); break;
-        case 23: _t->animateRotl(); break;
-        case 24: _t->animateRotlSt(); break;
-        case 25: _t->animateRotr(); break;
-        case 26: _t->animateRotrSt(); break;
-        case 27: _t->animateRotb(); break;
-        case 28: _t->animateRotbSt(); break;
-        case 29: _t->animateRotf(); break;
-        case 30: _t->animateRotfSt(); break;
-        case 31: { bool _r = _t->setStateFromScramble((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 8: _t->animateRotU(); break;
+        case 9: _t->animateRotUSt(); break;
+        case 10: _t->animateRotR(); break;
+        case 11: _t->animateRotRSt(); break;
+        case 12: _t->animateRotD(); break;
+        case 13: _t->animateRotDSt(); break;
+        case 14: _t->animateRotL(); break;
+        case 15: _t->animateRotLSt(); break;
+        case 16: _t->animateRotF(); break;
+        case 17: _t->animateRotFSt(); break;
+        case 18: _t->animateRotB(); break;
+        case 19: _t->animateRotBSt(); break;
+        case 20: _t->animateRotu(); break;
+        case 21: _t->animateRotuSt(); break;
+        case 22: _t->animateRotd(); break;
+        case 23: _t->animateRotdSt(); break;
+        case 24: _t->animateRotl(); break;
+        case 25: _t->animateRotlSt(); break;
+        case 26: _t->animateRotr(); break;
+        case 27: _t->animateRotrSt(); break;
+        case 28: _t->animateRotb(); break;
+        case 29: _t->animateRotbSt(); break;
+        case 30: _t->animateRotf(); break;
+        case 31: _t->animateRotfSt(); break;
+        case 32: { bool _r = _t->setStateFromScramble((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 32: _t->setRandomState(); break;
-        case 33: _t->setStateFromScan(); break;
-        case 34: _t->setSolved(); break;
-        case 35: _t->solve(); break;
-        case 36: _t->onForwardClicked(); break;
-        case 37: _t->onBackClicked(); break;
-        case 38: _t->disableSolveButtons(); break;
+        case 33: _t->setRandomState(); break;
+        case 34: _t->setStateFromScan(); break;
+        case 35: _t->setSolved(); break;
+        case 36: _t->solve(); break;
+        case 37: _t->onForwardClicked(); break;
+        case 38: _t->onBackClicked(); break;
+        case 39: _t->disableSolveButtons(); break;
+        case 40: _t->onStartStopClicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -389,6 +409,13 @@ void RubicksCube::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
                 return;
             }
         }
+        {
+            using _t = void (RubicksCube::*)();
+            if (_t _q_method = &RubicksCube::animatingButtonTextChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 2;
+                return;
+            }
+        }
     } else if (_c == QMetaObject::ReadProperty) {
         auto *_t = static_cast<RubicksCube *>(_o);
         (void)_t;
@@ -401,6 +428,8 @@ void RubicksCube::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 4: *reinterpret_cast< int*>(_v) = _t->currStepOfSolution; break;
         case 5: *reinterpret_cast< bool*>(_v) = _t->isFirstMove; break;
         case 6: *reinterpret_cast< bool*>(_v) = _t->isLastMove; break;
+        case 7: *reinterpret_cast< bool*>(_v) = _t->isAutoAnimating; break;
+        case 8: *reinterpret_cast< QString*>(_v) = _t->animatingButtonText; break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -450,6 +479,18 @@ void RubicksCube::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
                 Q_EMIT _t->moveChanged();
             }
             break;
+        case 7:
+            if (_t->isAutoAnimating != *reinterpret_cast< bool*>(_v)) {
+                _t->isAutoAnimating = *reinterpret_cast< bool*>(_v);
+                Q_EMIT _t->moveChanged();
+            }
+            break;
+        case 8:
+            if (_t->animatingButtonText != *reinterpret_cast< QString*>(_v)) {
+                _t->animatingButtonText = *reinterpret_cast< QString*>(_v);
+                Q_EMIT _t->animatingButtonTextChanged();
+            }
+            break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -476,18 +517,18 @@ int RubicksCube::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 39)
+        if (_id < 41)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 39;
+        _id -= 41;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 39)
+        if (_id < 41)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 39;
+        _id -= 41;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 9;
     }
     return _id;
 }
@@ -502,5 +543,11 @@ void RubicksCube::solutionTextChanged()
 void RubicksCube::moveChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+}
+
+// SIGNAL 2
+void RubicksCube::animatingButtonTextChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP

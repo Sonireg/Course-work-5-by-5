@@ -9,7 +9,7 @@ Window {
     height: mainScreen.height
 
     visible: true
-    title: "CubeAnimation"
+    title: "Кубик 5 на 5"
 
     Screen01 {
         id: mainScreen

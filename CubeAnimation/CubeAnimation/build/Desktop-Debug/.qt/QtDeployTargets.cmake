@@ -1,1 +1,0 @@
-set(__QT_DEPLOY_TARGET_CubeAnimationApp_FILE /home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/CubeAnimationApp)

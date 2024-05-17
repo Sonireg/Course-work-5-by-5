@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="/qt-project.org/imports/QtQuick/Studio/MultiText/">
-    <file alias="MultiTextElement.qml">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/_deps/ds-src/src/imports/multitext/MultiTextElement.qml</file>
-    <file alias="MultiTextItem.qml">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/_deps/ds-src/src/imports/multitext/MultiTextItem.qml</file>
-    <file alias="MultiTextException.qml">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/_deps/ds-src/src/imports/multitext/MultiTextException.qml</file>
-  </qresource>
-</RCC>
-

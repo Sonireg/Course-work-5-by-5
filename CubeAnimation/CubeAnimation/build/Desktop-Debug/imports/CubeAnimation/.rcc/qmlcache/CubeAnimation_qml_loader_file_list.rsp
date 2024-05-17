@@ -1,8 +1,0 @@
---resource
-/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/imports/CubeAnimation/.rcc/qmake_CubeAnimation.qrc
---resource
-/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/imports/CubeAnimation/.rcc/CubeAnimation_raw_qml_0.qrc
-/qt/qml/CubeAnimation/Constants.qml
-/qt/qml/CubeAnimation/DirectoryFontLoader.qml
-/qt/qml/CubeAnimation/EventListModel.qml
-/qt/qml/CubeAnimation/EventListSimulator.qml

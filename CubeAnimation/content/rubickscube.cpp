@@ -16,6 +16,8 @@ RubicksCube::RubicksCube()
 
         emit moveChanged();
     });
+
+    connect(&autoAnimationTimer, &QTimer::timeout, this, &RubicksCube::onForwardClicked);
 }
 
 qreal RubicksCube::getXRotationOf(QString elementName)
@@ -770,6 +772,18 @@ void RubicksCube::setSolved()
     {"yeld", "yeld"}, {"ycdl", "ycdl"}, {"ycd", "ycd"},   {"ycdr", "ycdr"}, {"yerd", "yerd"},
     {"yald", "yald"}, {"yedl", "yedl"}, {"yedc", "yedc"}, {"yedr", "yedr"}, {"yard", "yard"},
     };
+
+    solution = {};
+    currStepOfSolution = 0;
+
+    currMoveText = "";
+    nextSolutionMoves = "";
+    prevSolutionMoves = "";
+
+    emit solutionTextChanged();
+    isFirstMove = true;
+    isLastMove = true;
+    emit moveChanged();
 }
 
 void RubicksCube::solve()
@@ -796,6 +810,8 @@ void RubicksCube::solve()
 
 void RubicksCube::onForwardClicked()
 {
+    if (isLastMove) return;
+
     if (solution[currStepOfSolution] == "U") animateRotU();
     else if (solution[currStepOfSolution] == "U'") animateRotUSt();
     else if (solution[currStepOfSolution] == "R") animateRotR();
@@ -872,6 +888,21 @@ void RubicksCube::disableSolveButtons()
     isLastMove = true;
     isFirstMove = true;
     emit moveChanged();
+}
+
+void RubicksCube::onStartStopClicked()
+{
+    isAutoAnimating = !isAutoAnimating;
+    if (isAutoAnimating){
+        animatingButtonText = "Стоп";
+        autoAnimationTimer.start(250);
+    }
+    else {
+        animatingButtonText = "Пуск";
+        autoAnimationTimer.stop();
+    }
+    emit moveChanged();
+    emit animatingButtonTextChanged();
 }
 
 qreal RubicksCube::_calcRotation(QString el)

@@ -3708,7 +3708,12 @@ Rectangle {
         height: 50
         text: qsTr("Главное меню")
         visible: (MainMenu.currState !== 0)
-        onClicked: MainMenu.setCurrState(0)
+        onClicked: {
+            RubicksCube.setSolved()
+            MainMenu.setCurrState(0)
+        }
+
+        enabled: !RubicksCube.isAutoAnimating
     }
 
 
@@ -3727,6 +3732,8 @@ Rectangle {
                 RubicksCube.setRandomState();
                 if (MainMenu.currState === 2) RubicksCube.solve()
             }
+
+            enabled: !RubicksCube.isAutoAnimating
         }
         Button {
             id: button2
@@ -3737,6 +3744,8 @@ Rectangle {
                 MainMenu.setCurrState(4)
                 RubicksCube.setSolved()
             }
+
+            enabled: !RubicksCube.isAutoAnimating
         }
 
         Button {
@@ -3748,6 +3757,8 @@ Rectangle {
                 MainMenu.setCurrState(5)
                 RubicksCube.setSolved()
             }
+
+            enabled: !RubicksCube.isAutoAnimating
         }
 
         visible: MainMenu.currState === 1 || MainMenu.currState === 2
@@ -6271,7 +6282,7 @@ Rectangle {
                 RubicksCube.onBackClicked()
                 RubicksCube.disableSolveButtons()
             }
-            enabled: !RubicksCube.isFirstMove
+            enabled: !RubicksCube.isFirstMove && !RubicksCube.isAutoAnimating
         }
 
         Button {
@@ -6283,7 +6294,7 @@ Rectangle {
                 RubicksCube.onForwardClicked()
                 RubicksCube.disableSolveButtons()
             }
-            enabled: !RubicksCube.isLastMove
+            enabled: !RubicksCube.isLastMove && !RubicksCube.isAutoAnimating
         }
 
         Label {
@@ -6331,6 +6342,20 @@ Rectangle {
             text: "Текущий ход: " + RubicksCube.currStepOfSolution
             font.pixelSize: 50
             horizontalAlignment: Qt.AlignLeft
+        }
+
+        Button {
+            id: buttonAutoAssemblingStart
+            x: 191
+            y: 615
+            text: RubicksCube.animatingButtonText
+
+            onClicked: {
+                RubicksCube.onStartStopClicked()
+                RubicksCube.disableSolveButtons()
+            }
+
+            enabled: !RubicksCube.isLastMove
         }
 
         visible: MainMenu.currState === 2
