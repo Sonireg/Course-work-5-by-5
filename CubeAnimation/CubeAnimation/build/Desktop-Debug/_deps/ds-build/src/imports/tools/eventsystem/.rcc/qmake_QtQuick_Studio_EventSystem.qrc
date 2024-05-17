@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt-project.org/imports/QtQuick/Studio/EventSystem">
+    <file alias="qmldir">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/qml/QtQuick/Studio/EventSystem/qmldir</file>
+  </qresource>
+</RCC>
+

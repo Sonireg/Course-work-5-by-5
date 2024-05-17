@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/content">
+    <file alias="qmldir">/home/denis/Qtprojects/CubeAnimation/CubeAnimation/build/Desktop-Debug/qml/content/qmldir</file>
+  </qresource>
+</RCC>
+
